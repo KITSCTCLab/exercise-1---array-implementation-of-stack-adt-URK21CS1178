@@ -18,7 +18,7 @@ class Stack:
         self.top+=1
         self.lst[self.top]=a
         print("Element Sucessfully Added to the stack.")
-      else:
+     else:
         print("Stack is Full.")
         print("Cannot Push an element..")
    def pop(self):
