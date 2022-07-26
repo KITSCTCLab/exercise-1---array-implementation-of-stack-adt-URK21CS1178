@@ -38,7 +38,7 @@ class Stack:
      if self.isEmpty()!=1:
         for i in range(0,self.top+1):
            print(self.lst[i])
-     else:
+    
        
 # Do not change the following code
 size, queries = map(int, input().rstrip().split())
