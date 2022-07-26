@@ -18,27 +18,24 @@ class Stack:
     def push(self, data):
         if not self.is_full():
              print("The stack is full")
-          return "Push is not allowed"
+         
       else:
           self.top = self.top+1
-          self.l[self.top]=y
+          self.items[self.top]=y
 
     def pop(self):
         if not self.is_empty():
              if self.isEmpty()==1:
-          return "the stack is empty"
-      else:
-          print(self.l[self.top])
-          self.top = self.top-1
-          return "Array removed"
 
+      else:
+          print(self.items[self.top])
+          self.top = self.top-1
+        
     def status(self):
               for x in range(self.top+1):
-          print(self.l[x])
+          print(self.items[x])
 
-size = int(input("Enter the size of the stack:"))
 
-st1 = stackADT(size)
 
 
 # Do not change the following code
