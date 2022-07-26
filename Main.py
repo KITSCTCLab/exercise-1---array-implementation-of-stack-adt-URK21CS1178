@@ -5,15 +5,15 @@ class Stack:
 
     def is_empty(self):
          if self.top == -1 :
-     return 1
-    else :
-     return 0
+            return 1
+         else :
+            return 0
 
     def is_full(self):
         if self.top == (self.size - 1) :
-     return 1
-   else :
-     return 0
+            return 1
+        else :
+            return 0
    
     def push(self, data):
         if not self.is_full():
