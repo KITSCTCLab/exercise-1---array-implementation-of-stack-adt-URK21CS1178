@@ -8,17 +8,14 @@ class Stack:
             return 1
          else :
             return 0
-
     def is_full(self):
         if self.top == (self.size - 1) :
             return 1
         else :
             return 0
-   
     def push(self, data):
         if not self.is_full():
              print("The stack is full")
-         
       else:
           self.top = self.top+1
           self.items[self.top]=y
@@ -26,11 +23,9 @@ class Stack:
     def pop(self):
         if not self.is_empty():
              if self.isEmpty()==1:
-
       else:
           print(self.items[self.top])
           self.top = self.top-1
-        
     def status(self):
               for x in range(self.top+1):
           print(self.items[x])
