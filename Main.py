@@ -1,52 +1,62 @@
-import os
 class Stack:
-    def __init__(self, size):
-        self.size = size
-        self.top = -1
-        self.items = [] * size
-       
-
-    def is_empty(self):
-         if self.top == -1 :
-            return 1
-        else :
-            return 0
-        
-    def is_full(self):
-        if self.top = (self.size - 1)
-            return 1
-        else:
-            return 0
-
-    def push(self, data):
-        if not self.is_full():
-            self.top = self.top + 1
-            self.list[self.top] = a
-        else:
-             return 0
-               
-    def pop(self):
-        if not self.is_empty():
-            
-            v = self.list[self.top]
-            del self.list[self.top]
-            self.top = self.top - 1
-            return v
-            
-    def status(self):
-         if self.isEmpty() != 1:
-            for i in range (0,self.top+1):
-                print(self.list[i])
-        else:
-            return 0
-        
-# Do not change the following code
-size, queries = map(int, input().rstrip().split())
-stack = Stack(size)
-for line in range(queries):
-    values = list(map(int, input().rstrip().split()))
-    if values[0] == 1:
-        stack.push(values[1])
-    elif values[0] == 2:
-        stack.pop()m
-stack.status()
+ def __init__(self,s):
+ self.size = s
+ self.lst = [None]*s
+ self.top = -1
+ def isFull(self) :
+ if self.top == (self.size - 1) :
+ return 1
+ else :
+ return 0
+ def isEmpty(self) :
+ if self.top == -1 :
+ return 1
+ else :
+ return 0
+ def push(self,a):
+ if self.isFull() !=1:
+ self.top+=1
+ self.lst[self.top]=a
+ print("Element Sucessfully Added to the stack.")
+ else:
+ print("Stack is Full.")
+ print("Cannot Push an element..")
+ def pop(self):
+ if self.isEmpty()!=1:
+ t=self.lst[self.top]
+ del self.lst[self.top]
+ self.top-=1
+ return t
+ else:
+ return "Stack is Empty\nCannot Pop an element..."
+ def peek(self):
+ if self.isEmpty()!=1:
+ return self.lst[self.top]
+ else:
+ print("Stack is Empty.")
+ def display(self):
+ if self.isEmpty()!=1:
+ for i in range(0,self.top+1):
+ print(self.lst[i])
+ else:
+ return "Stack is Empty."
+print("\tExecution Begins:")
+s= int(input("Enter the size of the stack:"))
+str = Stack(s)
+while(1):
+ ch = int(input("1. Push\n2. Pop \n3. Peek \n4. Display \n5. Exit\n Enter
+your Choice:"))
+ if ch == 1 :
+ a = int(input("Enter the value you want to push: "))
+ str.push(a)
+ elif ch == 2 :
+ print("The Popped Element from the stack is ",str.pop())
+ elif ch == 3 :
+ print ("Top of Stack:",str.peek())
+ elif ch == 4 :
+ str.display()
+ elif ch == 5:
+ break
+ else :
+ print("Enter a valid choice")
+print("\tEnd of Execution.")
